@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.kotlinbasics.ui.theme.KotlinBasicsTheme
@@ -60,10 +61,28 @@ fun week02Variables(){
 
 fun week02Functionos(){
     println("Week 02 Functions")
-
+/*
     fun greet(name: String) = "Hello, $name!"
 
     println(greet("Android Developer"))
+
+    */
+    println("== Kotlin Functinos ==")
+
+    fun greet(name: String): String{
+        return "Hellom $name"
+    }
+
+    fun add(a: Int, b: Int) = a + b
+
+    fun introduce(name: String, age: Int=19){
+        println("My name is $name and I'm $age years old")
+    }
+
+    println(greet("Kotlin"))
+    println("Sum: ${add(5, 6)}")
+    introduce("Sim")
+    introduce("Kim", 23)
 }
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
