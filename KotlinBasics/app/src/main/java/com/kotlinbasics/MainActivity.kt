@@ -2,6 +2,7 @@ package com.kotlinbasics
 
 import android.os.Bundle
 import android.text.BoringLayout
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -32,6 +33,7 @@ class MainActivity : ComponentActivity() {
         //week02Variables()
         //week02Functionos()
         week03Classes()
+        week03Collections()
 
     }
 }
@@ -111,6 +113,17 @@ private fun week03Classes(){
 
     println("Person1: $person1")
     println("Equal? : ${person1==person2}")
+}
+
+private fun week03Collections(){
+    Log.d("KotlinWeek03","== Kotlin Collections ==")
+
+    val fruits = listOf("apple", "banana", "orange")
+    Log.d("KotlinWeek03","Fruits: $fruits")
+
+    for(fruit in fruits){
+        Log.d("KotlinWeek03","Fruit: $fruit")
+    }
 }
 
 @Composable
