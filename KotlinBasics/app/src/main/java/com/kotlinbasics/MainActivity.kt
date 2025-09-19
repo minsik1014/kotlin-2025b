@@ -29,12 +29,14 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-        week02Variables()
-        week02Functionos()
+        //week02Variables()
+        //week02Functionos()
+        week03Classes()
+
     }
 }
 
-fun week02Variables(){
+private fun week02Variables(){
     /*println("Week02 Variables")
     val courseName = "Mobile Programing"
     //courseName = "IoT Programing"
@@ -59,7 +61,7 @@ fun week02Variables(){
 
 }
 
-fun week02Functionos(){
+private fun week02Functionos(){
     println("Week 02 Functions")
 /*
     fun greet(name: String) = "Hello, $name!"
@@ -70,7 +72,7 @@ fun week02Functionos(){
     println("== Kotlin Functinos ==")
 
     fun greet(name: String): String{
-        return "Hellom $name"
+        return "Hello $name"
     }
 
     fun add(a: Int, b: Int) = a + b
@@ -84,6 +86,33 @@ fun week02Functionos(){
     introduce("Sim")
     introduce("Kim", 23)
 }
+
+private fun week03Classes(){
+    println("== Kotlin Classes ==")
+
+    class Student{
+        var name:String = ""
+        var age: Int=0
+
+        fun introduce(){
+            println("Hi, I'm $name and I'm $age years old")
+        }
+    }
+
+    val student = Student()
+    student.name="심민식"
+    student.age=23
+    student.introduce()
+
+    data class Person(val name:String, val age:Int) //data를 붙이면 값을 비교, data를 지우면 메모리주소를 비교
+
+    val person1 = Person("Lee", 24)
+    val person2 = Person("Lee", 24)
+
+    println("Person1: $person1")
+    println("Equal? : ${person1==person2}")
+}
+
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
